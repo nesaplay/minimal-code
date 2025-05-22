@@ -241,33 +241,6 @@ export default function LandingPage() {
                 </Button>
               </Link>
             </motion.div>
-
-            {/* Scroll Indicator */}
-            <motion.div
-              className="absolute bottom-0 left-1/2 transform -translate-x-1/2 flex flex-col items-center mt-24 md:mt-16"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 1.2, duration: 0.8 }}
-            >
-              <motion.p
-                className="text-sm text-gray-500 mb-2"
-                animate={{ y: [0, 5, 0] }}
-                transition={{ repeat: Number.POSITIVE_INFINITY, duration: 2 }}
-              >
-                Scroll to explore
-              </motion.p>
-              <motion.div animate={{ y: [0, 5, 0] }} transition={{ repeat: Number.POSITIVE_INFINITY, duration: 2 }}>
-                <ChevronDown className="h-5 w-5 text-gray-500" />
-              </motion.div>
-            </motion.div>
-            {/* Hide scroll indicator on small screens to prevent overlap */}
-            <style jsx>{`
-              @media (max-height: 700px) {
-                .absolute.bottom-0 {
-                  display: none;
-                }
-              }
-            `}</style>
           </div>
         </section>
 
